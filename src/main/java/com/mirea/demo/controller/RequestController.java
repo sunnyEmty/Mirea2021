@@ -25,4 +25,19 @@ public class RequestController {
     public ResponseEntity<String> getRequest(@ApiParam("Имя пользователя") @PathVariable String name) {
         return ResponseEntity.ok(String.format("Hello %s", name));
     }
+
+    @DeleteMapping("{name}")
+    @ApiOperation(value = "Получение delete-запроса",
+            notes = "Получение delete-запроса")
+    public ResponseEntity<String> deleteRequest(@ApiParam("Имя пользователя") @PathVariable String name) {
+        return ResponseEntity.ok(String.format("Hello %s", name));
+    }
+
+    @PutMapping("{name}")
+    @ApiOperation(value = "Получение put-запроса",
+            notes = "Получение put-запроса")
+    public ResponseEntity<String> putRequest(@ApiParam("Имя пользователя") @PathVariable String name) {
+        return ResponseEntity.ok(String.format("Hello %s", name));
+    }
+
 }
